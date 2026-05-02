@@ -1,28 +1,28 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyNavbar from "./components/Navbar";
-import MyFooter from "./components/Footer";
-import ScrollRow from "./components/ScrollRow";
-const starWars = "&s=star wars "
-const potter = "&s=harry potter"
-const avengers = "&s=avengers"
-const sbagliato = "gdjsfghjdgfhshfgshgf"
-
+import MyNavbar from "./components/header/Navbar";
+import MyFooter from "./components/footer/Footer";
+import Home from "./components/homepage/Home";
+import ProfilePage from "./components/editProfilePage/Form";
+import SettingsPage from "./components/settings/SettingsPage";
+// {/* <Route path="/settings" element={<SettingsPage />} />; */}
 
 function App() {
   return (
-    <div className="d-flex flex-column min-vh-100 bg-black" data-bs-theme="dark">
+    <div
+      className="d-flex flex-column min-vh-100 bg-black"
+      data-bs-theme="dark"
+    >
       <header>
-      <MyNavbar/>
+        <MyNavbar />
       </header>
       <main className="flex-grow-1">
-        <ScrollRow category="Star Wars" search = {starWars}/>
-        <ScrollRow category="QUI C'É UN ERRORE" search = {sbagliato}/>
-        <ScrollRow category="Harry Potter" search = {potter}/>
-        <ScrollRow category="Il signore degli anelli" search = {avengers}/>
+        <Home />
+        <ProfilePage />
+        <SettingsPage />
       </main>
       <footer>
-        <MyFooter/>
+        <MyFooter />
       </footer>
     </div>
   );

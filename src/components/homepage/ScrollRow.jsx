@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Card, Button, Placeholder, Alert, Spinner } from "react-bootstrap";
+import { Card, Alert, Spinner } from "react-bootstrap";
 const placeholderCard = (
   <div className="d-flex justify-content-around">
     <Card style={{ width: "180px", height: "250px" }}>

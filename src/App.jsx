@@ -4,8 +4,6 @@ import MyNavbar from "./components/header/Navbar";
 import MyFooter from "./components/footer/Footer";
 import Home from "./components/homepage/Home";
 import ProfilePage from "./components/editProfilePage/Form";
-import SettingsPage from "./components/settings/SettingsPage";
-// {/* <Route path="/settings" element={<SettingsPage />} />; */}
 
 function App() {
   return (
@@ -19,7 +17,6 @@ function App() {
       <main className="flex-grow-1">
         <Home />
         <ProfilePage />
-        <SettingsPage />
       </main>
       <footer>
         <MyFooter />

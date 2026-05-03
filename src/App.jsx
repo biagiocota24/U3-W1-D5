@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MyNavbar from "./components/header/Navbar";
 import MyFooter from "./components/footer/Footer";
 import Home from "./components/homepage/Home";
-import ProfilePage from "./components/editProfilePage/Form";
+import ProfilePage from "./components/formPage/Form";
 
 function App() {
   return (

@@ -67,7 +67,7 @@ class ScrollRow extends Component {
               <div key={movie.imdbID} className="single-movie">
                 <img
                   src={movie.Poster}
-                  alt="kitten"
+                  alt="Cover-movie"
                   style={{ width: "180px" }}
                   className="rounded-2 z-1"
                 />

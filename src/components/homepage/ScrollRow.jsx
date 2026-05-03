@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Card, Alert, Spinner } from "react-bootstrap";
+import netflixNotFound from "../../assets/netflix_not_found.svg"; //
 const placeholderCard = (
   <div className="d-flex justify-content-around">
     <Card style={{ width: "180px", height: "250px" }}>
@@ -70,6 +71,10 @@ class ScrollRow extends Component {
                   alt="Cover-movie"
                   style={{ width: "180px" }}
                   className="rounded-2 z-1"
+                  onError={(e) => {
+                    e.target.onerror = null; 
+                    e.target.src = netflixNotFound;
+                  }}
                 />
               </div>
             );

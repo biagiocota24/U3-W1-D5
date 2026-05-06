@@ -1,6 +1,7 @@
-import { Container, Navbar, Nav,NavDropdown } from "react-bootstrap";
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const MyNavbar = function () {
   const Logo = () => (
@@ -22,26 +23,23 @@ const MyNavbar = function () {
   return (
     <Navbar expand="lg" className="bg-black">
       <Container fluid>
-        <Navbar.Brand href="#home">{Logo()}</Navbar.Brand>
+        <Link className="nav.link" to="/">{Logo()}</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">TV Shows</Nav.Link>
-            <Nav.Link href="#link">Movies</Nav.Link>
-            <Nav.Link href="#link">Recently added</Nav.Link>
-            <Nav.Link href="#link">MyList</Nav.Link>
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/tv-shows" className="nav-link">TV Shows</Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#link"><FaSearch/></Nav.Link>
+            <Nav.Link href="#link">
+              <FaSearch />
+            </Nav.Link>
             <Nav.Link href="#link">KIDS</Nav.Link>
-            <Nav.Link href="#link"><IoIosNotifications className="fs-3"/></Nav.Link>
-            <NavDropdown title="USER" id="nav-dropdown">
-                <NavDropdown.Item>Ciao</NavDropdown.Item>
-                <NavDropdown.Item>Come</NavDropdown.Item>
-                <NavDropdown.Item>stai</NavDropdown.Item>
-                <NavDropdown.Item>oggi
-                </NavDropdown.Item>
+            <Nav.Link href="#link">
+              <IoIosNotifications className="fs-3" />
+            </Nav.Link>
+            <NavDropdown title="USER" id="nav-dropdown" align="end">
+              <Link className="dropdown-item" to="/profilePage">Profile Page</Link>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
